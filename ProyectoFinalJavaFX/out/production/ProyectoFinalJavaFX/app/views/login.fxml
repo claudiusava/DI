@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: transparent;" stylesheets="@../styls.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.LoginController">
+    <children>
+        <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/netflixSinFondo.jpg" />
+            </image>
+        </ImageView>
+        <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-opacity: 0.7;">
+                    <StackPane.margin>
+                        <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+                    </StackPane.margin>
+                    <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: black;">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksan; -fx-fill: red; -fx-font-weight: bold; -fx-font-size: 2em;" text="Inicio sesión" />
+                                <HBox maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="50.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <TextField fx:id="usernameLogin" cacheHint="SPEED" promptText="nombre de usuario" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                                        <ImageView fitHeight="15.0" fitWidth="15.0">
+                                            <image>
+                                                <Image url="@../resources/UsernameIcon.jpeg" />
+                                            </image>
+                                            <viewport>
+                                                <Rectangle2D />
+                                            </viewport>
+                                            <HBox.margin>
+                                                <Insets right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                    </children>
+                                    <cursor>
+                                        <Cursor fx:constant="DEFAULT" />
+                                    </cursor>
+                                </HBox>
+                                <HBox maxWidth="-Infinity" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #a2a2a2; -fx-border-width: 0px 0px 2px 0px;">
+                                    <children>
+                                        <PasswordField fx:id="passwordLogin" promptText="contraseña" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS" />
+                                        <ImageView fitHeight="15.0" fitWidth="15.0">
+                                            <image>
+                                                <Image url="@../resources/KeyIcon.jpeg" />
+                                            </image>
+                                            <viewport>
+                                                <Rectangle2D />
+                                            </viewport>
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </HBox.margin>
+                                        </ImageView>
+                                    </children>
+                                    <cursor>
+                                        <Cursor fx:constant="DEFAULT" />
+                                    </cursor>
+                                    <VBox.margin>
+                                        <Insets top="30.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Button fx:id="buttonLogin" mnemonicParsing="false" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: red; -fx-background-radius: 100px; -fx-text-fill: white;" text="Iniciar sesión">
+                                    <VBox.margin>
+                                        <Insets top="30.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <CheckBox mnemonicParsing="false" text="Recordarme" textFill="WHITE">
+                                            <HBox.margin>
+                                                <Insets left="50.0" top="20.0" />
+                                            </HBox.margin>
+                                        </CheckBox>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-family: Quicksand;" text="Necesito una cuenta">
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Text>
+
+                                        <Text onMouseClicked="#signup" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-family: Quicksand; -fx-fill: red;" text="Regístrate">
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Text>
+
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

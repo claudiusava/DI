@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800" prefWidth="800" style="-fx-background-color: transparent;" stylesheets="@../styls.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.MainWindowsController">
+    <children>
+        <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../resources/netflixSinFondo.jpg" />
+            </image>
+        </ImageView>
+        <StackPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-opacity: 0.7;">
+                    <StackPane.margin>
+                        <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+                    </StackPane.margin>
+                    <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: black;">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Quicksan; -fx-fill: red; -fx-font-weight: bold; -fx-font-size: 2em;" text="Usuarios" />
+                        <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                              <TableColumn fx:id="tableusername" prefWidth="128.0" text="Nombre de usuario" />
+                              <TableColumn fx:id="tablename" prefWidth="70.0" text="Nombre" />
+                              <TableColumn fx:id="tablesurname" prefWidth="73.0" text="Apellido" />
+                              <TableColumn fx:id="tableemail" prefWidth="188.0" text="E-mail" />
+                              <TableColumn fx:id="tablegenre" prefWidth="157.0" text="Género favorito" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                                <Button fx:id="buttonDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: red; -fx-background-radius: 100px; -fx-text-fill: white;" text="Borrar usuario">
+                                    <VBox.margin>
+                                        <Insets top="30.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <HBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-family: Quicksand;" text="Añadir usuario:">
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+
+                                        </Text>
+                                        <Text onMouseClicked="#signup" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-font-family: Quicksand; -fx-fill: red;" text="Regístrate">
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </Text>
+
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
